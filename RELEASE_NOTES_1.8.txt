@@ -1,0 +1,15 @@
+CHISTIYA HIDAYAT MISSION - v1.8
+Activity Log & User Activity Tracking
+
+Added:
+- Activity Log screen using the existing audit_logs table.
+- Recent 300 activity records with date/time, action, module, record ID and details.
+- Best-effort logging for successful login, generic module record creation, fee invoice creation, fee payment, attendance updates and examination mark updates.
+- Refresh control for the activity list.
+
+Safety:
+- No SQL migration required; uses the existing audit_logs schema.
+- No existing records are deleted or modified by this release.
+- Audit logging failures do not block the main school operation.
+- Activity visibility follows existing Supabase Row Level Security and admin policy.
+- Build and live Supabase testing have not been completed in this package preparation step.

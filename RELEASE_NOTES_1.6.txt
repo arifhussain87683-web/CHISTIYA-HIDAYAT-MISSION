@@ -1,0 +1,8 @@
+CHISTIYA HIDAYAT MISSION — Version 1.6
+School Settings & Customization
+
+Added admin screen for school name, address, phone, headmaster/principal name, default language, and print branding URL/path fields for logo, signature, and stamp. Uses the existing public.school_settings table. No database migration is included. No student, fee, attendance, exam, or session records are deleted or modified.
+
+Limitations: image fields store a URL or path only; file upload and Supabase Storage bucket configuration are not included. Print templates are not yet globally wired to all saved branding fields.
+
+Validation: ZIP integrity checked. Full Vite build and live Supabase integration test were not completed in this environment.

@@ -1,0 +1,30 @@
+CHISTIYA HIDAYAT MISSION - RELEASE NOTES v1.3
+Examination & Result Management
+
+Added:
+- Class-wise subject setup with full marks and pass marks.
+- Create the three planned examinations per class: First Unit Test, Half Yearly Examination and Annual Examination.
+- Class-wise marks entry for enrolled students.
+- Existing marks load before editing; save uses the existing unique exam/student/subject key.
+- Marks validation prevents negative values and marks above subject full marks.
+- Class result report for a selected examination.
+- Combined Annual Result calculates aggregate marks and percentage across all three examinations.
+- Equal percentages receive joint ranks (competition ranking, e.g. 1, 1, 3).
+- Missing subject marks are shown as Incomplete and are not ranked.
+- Class result can be printed or exported as CSV.
+
+Result rules:
+- First Unit Test and Half Yearly Examination are class-wise result reports only; no individual marksheet is generated in this version.
+- Combined Annual Result uses marks from First Unit Test + Half Yearly Examination + Annual Examination.
+- A student is marked Pass only when all required marks are present and each subject mark meets its pass mark. Otherwise status is Fail or Incomplete.
+
+Database:
+- Uses existing subjects, exams, student_enrollments and exam_marks tables.
+- No new SQL migration is required.
+- No DROP, DELETE, TRUNCATE, reset or destructive database operation is included.
+- Existing student and examination records are retained.
+
+Limitations / verification:
+- Subject full marks and pass marks are shared across all three examinations for a class.
+- No individual marksheet, grading scale, configurable weightage, or exam timetable workflow is included yet.
+- A full production build and live Supabase integration test have not yet been completed in this environment. Verify on a backup/test record before routine school use.

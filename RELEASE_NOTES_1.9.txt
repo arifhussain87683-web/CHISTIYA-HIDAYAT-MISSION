@@ -1,0 +1,11 @@
+CHISTIYA HIDAYAT MISSION v1.9 — User & Role Management
+
+- Added an admin-only User Roles screen using the existing user_profiles table.
+- Admin can add a profile for an existing Supabase Auth user, assign Admin or Teacher, and activate/deactivate profiles.
+- Inactive profiles are signed out after profile validation.
+- Teacher navigation is limited to basic teaching modules; Admin retains all modules.
+- Prevents an administrator from demoting/deactivating their own profile and prevents removing the last active administrator.
+- No SQL migration and no destructive database operation.
+
+Important: Create Auth accounts separately in Supabase Authentication. This UI role filter is not a substitute for Row Level Security. Existing RLS policies must explicitly permit the intended teacher operations before teacher workflows can be used.
+- Build and live Supabase testing have not been completed.

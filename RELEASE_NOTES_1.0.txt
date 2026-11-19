@@ -1,0 +1,19 @@
+CHISTIYA HIDAYAT MISSION — v1.0 Accounts Foundation
+
+New:
+- Accounts overview with total income, total expenses, net balance and entry count.
+- Cashbook ledger for fee payment income and expense voucher outflows.
+- Fee receipts post to Accounts only after invoice allocation succeeds.
+- Expense vouchers post to Accounts after the expense record is saved.
+- Ledger entries are linked to their source records and protected against duplicate source posting.
+
+Database step required:
+- Run CHISTIYA_HIDAYAT_MISSION_Accounts_Migration_v1.0.sql once in Supabase SQL Editor.
+- The migration creates one new table and indexes and enables admin-only RLS.
+- It does not drop, truncate, reset, or alter existing tables or records.
+
+Limitations:
+- No automatic import/backfill of old receipts or expenses.
+- No manual donation/other-income entry, bank account reconciliation, or multi-account transfers yet.
+- No full production build or live Supabase integration test was available in this packaging environment.
+- If a source transaction saves but ledger posting fails, reconcile before retrying to avoid duplicate source transactions.

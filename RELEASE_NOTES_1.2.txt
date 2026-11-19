@@ -1,0 +1,24 @@
+CHISTIYA HIDAYAT MISSION - RELEASE NOTES v1.2
+Student Attendance & Attendance Reports
+
+Added:
+- Class-wise daily attendance for the active academic session.
+- Attendance slots: Regular, Morning and Evening.
+- Load existing attendance for the selected date and slot before editing.
+- Mark all students Present or Absent with one action.
+- Save attendance using the existing student_attendance table and its unique student/date/slot key.
+- Monthly class-wise attendance report for the Regular slot.
+- Per-student Present, Absent, Holiday, Working Days and Attendance Percentage.
+- CSV export and printable monthly report.
+- Attendance percentage excludes holidays: Present / (Present + Absent).
+
+Database:
+- No new table or SQL migration is required for this module.
+- Uses the existing student_enrollments and student_attendance tables.
+- No DROP, DELETE, TRUNCATE, reset or destructive database operation is included.
+- Existing records are retained. Saving a previously recorded student/date/slot updates that same attendance row.
+
+Important:
+- Monthly report currently summarizes the Regular attendance slot only.
+- Morning and Evening slots can be marked separately but are not combined into the monthly report.
+- A full production build and live Supabase integration test have not yet been completed in this environment.

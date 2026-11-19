@@ -1,0 +1,11 @@
+CHISTIYA HIDAYAT MISSION — Version 2.0
+ড্যাশবোর্ড ও সিস্টেম ইন্টিগ্রেশন
+
+- ড্যাশবোর্ডে গুরুত্বপূর্ণ মডিউলের Quick Access যোগ করা হয়েছে।
+- লগইন করা ব্যবহারকারীর নাম ও Role দেখানো হয়।
+- Teacher Profile-এর জন্য Navigation Permission Guard যোগ করা হয়েছে।
+- ড্যাশবোর্ড ও মেনুতে Teacher-এর অনুমোদিত পেজের একই তালিকা ব্যবহার করা হয়েছে।
+- বিদ্যমান Supabase Table, Record, Migration ও Module Workflow অপরিবর্তিত রাখা হয়েছে।
+
+গুরুত্বপূর্ণ: শুধু মেনু লুকানো Database Security নয়। Teacher Account ব্যবহারের আগে Supabase Row Level Security Policy যাচাই করুন।
+এই প্যাকেজে Build এবং Live Supabase Integration Test সম্পন্ন হয়নি।

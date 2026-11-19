@@ -1,0 +1,12 @@
+CHISTIYA HIDAYAT MISSION v1.9 — ব্যবহারকারী ও ভূমিকা ব্যবস্থাপনা
+
+- বিদ্যমান user_profiles টেবিল ব্যবহার করে Admin-only User Roles screen যোগ করা হয়েছে।
+- আগে থেকে তৈরি Supabase Auth user-এর জন্য profile যোগ করা যাবে।
+- Admin বা Teacher role নির্বাচন এবং Active/Inactive status পরিবর্তন করা যাবে।
+- Inactive profile যাচাইয়ের পর account sign out হবে।
+- Teacher menu সীমিত থাকবে; Admin সব module দেখতে পারবেন।
+- নিজের Admin profile নিষ্ক্রিয় বা Teacher করা যাবে না। শেষ সক্রিয় Admin-কে নিষ্ক্রিয় করা যাবে না।
+- নতুন SQL migration বা destructive database operation নেই।
+
+গুরুত্বপূর্ণ: Supabase Authentication-এ login account আলাদাভাবে তৈরি করতে হবে। শুধু menu লুকানো database security নয়। Teacher ব্যবহারের আগে Supabase RLS policy-তে প্রয়োজনীয় অনুমতি নিশ্চিত করতে হবে।
+- Build এবং live Supabase testing এখনো সম্পন্ন হয়নি।

@@ -1,0 +1,12 @@
+CHISTIYA HIDAYAT MISSION — Version 1.7
+Backup Management
+
+- Added an admin Backup screen to export application records as a downloadable JSON file.
+- Export checks the existing application tables in pages of 500 records.
+- The backup includes per-table export status and row counts; unavailable tables are reported.
+- No database migration is required.
+- Creating a backup does not modify or delete Supabase records.
+- Restore/import is intentionally not enabled in this release to prevent accidental data loss.
+- Auth users/passwords, database schema, Storage files and private keys are not included.
+- Keep backup files private because they may contain student and financial information.
+- Build and live Supabase testing remain pending.

@@ -1,0 +1,11 @@
+CHISTIYA HIDAYAT MISSION — Version 2.0
+Dashboard & System Integration
+
+- Added dashboard quick access tiles for key modules.
+- Added signed-in profile and role context to the dashboard.
+- Added a navigation permission guard for teacher profiles.
+- Unified the teacher-allowed page list so dashboard shortcuts and navigation follow the same client-side rule.
+- Retained existing Supabase tables, records, migrations and module workflows.
+
+Important: Client-side role checks are not a substitute for Supabase Row Level Security. Confirm table-level RLS policies before using teacher accounts with real data.
+Build and live Supabase integration tests have not been completed in this package.

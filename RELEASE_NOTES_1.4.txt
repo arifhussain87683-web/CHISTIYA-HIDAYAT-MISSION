@@ -1,0 +1,24 @@
+CHISTIYA HIDAYAT MISSION — Version 1.4
+Academic Session & Student Promotion
+
+New features
+- Create additional academic sessions without changing the current session.
+- View current, inactive and archived sessions.
+- Load active enrollments from a source session and select students for re-enrollment.
+- Choose a destination class for each selected student; suggested destination is the next active class in sort order.
+- Promote selected students through a guarded database function. New roll numbers are assigned automatically per destination class.
+- Preserve permanent student IDs, admission numbers, and all prior session enrollments.
+- Activate a session through a guarded database function; the previous current session is archived, not deleted.
+
+Database migration required
+Run CHISTIYA_HIDAYAT_MISSION_Session_Promotion_Migration_v1.4.sql once in the CHISTIYA HIDAYAT MISSION Supabase project. It adds two RPC functions only. It does not drop or truncate data or tables.
+
+Safety and limitations
+- The migration requires the existing is_active_admin() function and the foundation schema.
+- Promotion is atomic within one database function call. Duplicate destination enrollments are rejected.
+- A student not selected remains only in the source session; no historical enrollment is deleted.
+- Class promotion suggestions follow active class sort_order. Review each destination class before confirming.
+- The module has not yet been tested against the live Supabase project. Verify with a small test group after backup before using for the whole school.
+- No full production build has been confirmed in this environment.
+
+Languages inside the software: Bengali and English only.

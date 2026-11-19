@@ -1,0 +1,21 @@
+CHISTIYA HIDAYAT MISSION - Version 1.5
+Student Profile & ID Card
+
+Added:
+- Student profile view with guardian, date of birth, address, mobile and admission details.
+- Student ID card print action from the student list and ID Card / Profile module.
+- ID card includes school name, current session, student photo when available, admission number, class, roll, father name and date of birth.
+- Student list query now loads the existing profile fields and enrollment data needed by the profile and card.
+- Uses the existing student-photos Supabase Storage bucket and stored photo_path. No database migration is included.
+
+Safety:
+- No SQL migration is required for this module.
+- No existing records are deleted or modified.
+- Student photos are read from the existing storage bucket using a signed URL; bucket access and policies must permit the signed URL request.
+
+Limitations / verification:
+- This release has not been built with Vite or tested against the live Supabase project in this environment.
+- ID card print is one student per print action, not an A4 multi-card sheet.
+- School address, logo, signature and stamp are not yet printed on the card.
+- If the student-photos bucket does not exist or policies block access, the card will print without the photo.
+- Browser pop-ups must be allowed for printing.

@@ -1,0 +1,26 @@
+CHISTIYA HIDAYAT MISSION — Version 1.1
+Teacher Management and Salary Management
+
+Added:
+- Dedicated Salary menu and salary payment form.
+- Active teacher selection with default monthly salary.
+- Salary month, payment date, basic salary snapshot, deduction, bonus and payment method.
+- Net salary calculation.
+- One payment record per teacher per salary month; duplicate month submissions are blocked.
+- Salary register with voucher reference and printable salary payment voucher.
+- Salary payments are posted to account_entries as Teacher Salary expenses.
+- Accounts source_type: teacher_salary_payment.
+
+Database:
+- Uses existing teachers and teacher_salary_payments tables from the foundation schema.
+- Uses account_entries from the v1.0 Accounts migration.
+- No new SQL migration is included in v1.1.
+- No DROP, DELETE, TRUNCATE, reset or historical data rewrite is included.
+
+Important:
+- To use Salary -> Accounts automatic posting, the v1.0 Accounts migration must have been applied first.
+- Salary payment row is saved before its ledger entry. If ledger posting fails, the UI warns the administrator; reconcile before retrying to avoid duplicate salary payment.
+- One full monthly payment per teacher is supported. Multiple installments/advance recovery are not supported yet.
+- Build and live Supabase integration tests have not been run in this environment.
+
+All application UI and documentation are Bengali and English only.
